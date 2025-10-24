@@ -37,7 +37,4 @@ export default mongoose.model("Contact", contactSchema);
 
 
 
-// Userid saiannapurnacarwash@gmail.com 
-// Password Sacarwash@8717
 
-// guwm bzkq svmz flwk
