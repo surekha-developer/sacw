@@ -1,0 +1,13 @@
+# Node
+node_modules/
+.env
+.DS_Store
+
+# Build folders
+frontend/dist
+backend/node_modules
+frontend/node_modules
+
+# Logs
+*.log
+

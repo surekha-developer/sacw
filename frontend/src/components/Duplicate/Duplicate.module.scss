@@ -1,0 +1,276 @@
+
+
+
+
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background: rgb(228, 237, 246);
+  // background: linear-gradient(to bottom, rgb(182, 182, 234), rgb(183, 183, 199));
+  color: #fff;
+  // padding:50px 20px;
+  padding-top:150px;
+  padding-bottom:50px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+/* Background floating shapes */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(33, 150, 243, 0.2);
+    border-radius: 50%;
+    animation: moveUp linear infinite;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Overlay: text + car */
+.overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* Text */
+.textContainer {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  h1 {
+    color:black;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.4;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    
+
+    @media (max-width: 992px) {
+      font-size: 2.2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+      color: #282828;
+      font-weight: 600;
+      padding-top:10px;
+      padding-bottom:10px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+
+    @media (max-width: 992px) {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
+  }
+
+  .deliveryNote {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(24, 24, 64);
+  background: linear-gradient(to right, #a5c9f6, #8ccadc);
+  border-left: 4px solid #4d15dd;
+  padding: 10px 20px;
+  border-radius: 25px;
+  width: fit-content;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: fadeIn 0.5s ease-in forwards;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 992px) {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  .ctaButton {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        background-color: #005fcc;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+
+    @media (max-width: 480px) {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+      .arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .arrow {
+    transform: translateX(4px);
+  }
+  
+  }
+}
+
+
+
+.carLoader {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
+
+  /* Neon glowing border */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -3px; /* extends slightly beyond border */
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      #e0eacd,
+      #d1d9bd,
+      #9ad3c8,
+      #edd0e8
+    );
+    animation: rotateGlow 5s linear infinite;
+    z-index: 0;
+  }
+
+  /* Inner mask to make glow visible only on border */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 8px; /* controls border thickness */
+    background: linear-gradient(to bottom, rgb(182, 182, 234), rgb(183, 183, 199));
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Keeps actual car animation inside */
+  .carloadersize {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Center car image */
+  .centerCar {
+    position: absolute;
+    width: 85%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  /* Responsive sizes */
+  @media (max-width: 1200px) {
+    width: 520px;
+    height: 520px;
+  }
+
+  @media (max-width: 992px) {
+    width: 460px;
+    height: 460px;
+  }
+
+  @media (max-width: 768px) {
+    width: 380px;
+    height: 380px;
+  }
+
+  @media (max-width: 480px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media (max-width: 360px) {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+/* 🔥 Glow rotation animation */
+@keyframes rotateGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,11 @@
+/* Scroll offset for sections */
+.scrollSection {
+  scroll-margin-top: 80px; // match your header height
+}
+
+/* Optional: adjust for responsive header heights */
+@media (max-width: 768px) {
+  .scrollSection {
+    scroll-margin-top: 60px; // smaller header in mobile
+  }
+}

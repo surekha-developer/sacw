@@ -1,0 +1,129 @@
+
+
+// /* ✅ Outer Wrapper */
+.contactSection {
+  width: 100%;
+  padding: 40px 15px;
+  padding-bottom: 80px;
+  background: rgb(228, 237, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden; /* 💯 Prevent horizontal scroll */
+}
+
+/* ✅ Blue Container */
+.cardContainer {
+  width: 100%;
+  max-width: 1200px;
+  background: #0c0965;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ✅ Responsive Grid Layout */
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* 💥 Magic line */
+  gap: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ✅ Individual Cards */
+.item {
+  background: #fff;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon {
+    font-size: 2.2rem;
+    color: #5d1eb4;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #5d1eb4;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #5d1eb4;
+    line-height: 1.6;
+    word-wrap: break-word;
+  }
+}
+
+/* ✅ Responsive Fine-Tuning */
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 60px 10px;
+  }
+
+  .cardContainer {
+    padding: 25px 15px;
+  }
+
+  .item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    h3 {
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+.whatsappLine {
+  display: flex;
+  align-items: center;
+ 
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #25d366; // WhatsApp green
+  background: rgba(37, 211, 102, 0.1);
+  padding: 8px 8px;
+
+  border-radius: 6px;
+  width: fit-content;
+  margin-top: 8px;
+  
+  text-shadow: none;
+
+  @media (max-width: 992px) {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.whatsappIcon {
+  font-size: 1.3rem;
+  color: #25d366;
+}
+

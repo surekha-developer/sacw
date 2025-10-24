@@ -1,0 +1,162 @@
+
+
+/* Header Container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+  background: #fff;
+  color: #0a0a0a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: padding 0.3s ease;
+
+  @media (max-width: 1200px) { padding: 15px 100px; }
+  @media (max-width: 992px) { padding: 15px 70px; }
+  @media (max-width: 768px) { padding: 0 20px; }
+  @media (max-width: 576px) { padding: 0 20px; }
+  @media (max-width: 458px) { padding: 0 10px; }
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+
+  .logoLeft {
+    display: flex;
+    align-items: center;
+  }
+
+  .carWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .carlogo {
+      width: 40px;
+      height: 40px;
+
+      @media (max-width: 768px) { width: 30px; height: 30px; }
+      @media (max-width: 480px) { width: 26px; height: 26px; }
+    }
+
+    .subTitle {
+      font-size: 12px;
+      font-weight: 500;
+      color: #444;
+
+      @media (max-width: 768px) { font-size: 11px; }
+    }
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffcc00;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 768px) { font-size: 18px; }
+    @media (max-width: 480px) { font-size: 16px; }
+  }
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: flex;
+  gap: 28px;
+
+  button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #5d1eb4;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-bottom: 2px solid #ffcc00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease;
+
+  button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(64, 60, 60, 0.15);
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #5d1eb4;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 15px;
+      padding: 8px 0;
+    }
+  }
+}
+
+/* Menu Toggle Button */
+.menuToggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+/* Dropdown Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

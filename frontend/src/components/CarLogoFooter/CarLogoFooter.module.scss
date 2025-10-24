@@ -1,0 +1,203 @@
+// .logoContainer {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 15px; /* Default gap for desktop */
+//   width: 100%;
+//   text-align: left;
+//   padding: 10px 0;
+
+//   @media (max-width: 768px) {
+//     flex-direction: column; /* Stack logo + text */
+//     gap: 0px; /* 🔥 reduced from 15px to 6px */
+//   }
+
+//   @media (max-width: 480px) {
+//     gap: 0px; /* even tighter on small screens */
+//   }
+// }
+
+// /* Car Animation */
+// .carAnimation {
+//   width: 75px;
+//   height: 75px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   /* 🔥 Fix for unwanted white space inside the animation */
+//   overflow: hidden; /* crops extra padding */
+//   margin-top: -6px; /* move animation upward slightly */
+//   margin-bottom: -1px; /* tighten below text */
+
+//   @media (max-width: 768px) {
+//     width: 65px;
+//     height: 65px;
+//     margin-top: -4px;
+//     margin-bottom: -3px;
+//   }
+
+//   @media (max-width: 480px) {
+//     width: 55px;
+//     height: 55px;
+//     margin-top: -3px;
+//     margin-bottom: -2px;
+//   }
+
+//   canvas,
+//   svg {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+// /* Text beside logo */
+// .textContainer {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   line-height: 1.1;
+
+//   @media (max-width: 768px) {
+//     align-items: center;
+//     text-align: center;
+//   }
+// }
+
+// /* Main Title with gradient */
+// .title {
+//   font-size: 22px;
+//   font-weight: 800;
+//   background: linear-gradient(90deg, #0072ff, #00c6ff);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+
+//   @media (max-width: 768px) {
+//     font-size: 18px;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 16px;
+//   }
+// }
+
+// /* Subtitle with golden gradient */
+// .subtitle {
+//   font-size: 16px;
+//   font-weight: 600;
+//   margin-top: 2px;
+//   background: linear-gradient(90deg, #ffcc00, #ff9900);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+
+//   @media (max-width: 768px) {
+//     font-size: 14px;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 12px;
+//   }
+// }
+
+//.........
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* desktop gap */
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+
+  @media (max-width: 992px) {
+    flex-direction: column; /* stack vertically */
+    gap: 2px; /* 🔥 smaller gap for tablet */
+  }
+
+  @media (max-width: 768px) {
+    gap: 1px; /* tighter for mobile */
+  }
+}
+
+/* Car Animation */
+.carAnimation {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden; /* crop extra Lottie space */
+  margin-top: -6px; /* pull up slightly */
+  margin-bottom: -3px; /* reduce bottom space */
+
+  @media (max-width: 992px) {
+    width: 75px;
+    height: 75px;
+    margin-top: -5px;
+    margin-bottom: -15px;
+  }
+
+  @media (max-width: 768px) {
+    width: 65px;
+    height: 65px;
+    margin-top: -4px;
+    margin-bottom: -15px;
+  }
+
+  canvas,
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Text beside logo */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.1;
+
+  @media (max-width: 992px) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Title */
+.title {
+  font-size: 24px;
+  font-weight: 800;
+//   background: linear-gradient(to top, #16191c, #1092ac);
+  background: linear-gradient(to top, #b3d5f6, #e0eef1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 19px;
+  font-weight: 800;
+  margin-top: 1px; /* reduced gap */
+  background: linear-gradient(to top, #97795b, #f1e1ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 992px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
