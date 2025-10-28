@@ -1,29 +1,8 @@
-// import React from "react";
-// import styles from "./Location.module.scss";
 
-// const Location = () => {
-//   return (
-//     <section className={styles.locationSection}>
-//       <h2 className={styles.title}>📍 Find Us</h2>
-//       <p className={styles.subtitle}>Sai Annapurna Car Wash</p>
-//       <p className={styles.address}>
-//         Near Sai Baba Temple, Kukatpally, Hyderabad, Telangana
-//       </p>
-
-//       <div className={styles.qrBox}>
-//         <img src="/dist\qrcode.jpeg" alt="Google Maps QR" />
-//         <p>Scan to locate us on Google Maps</p>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Location;
-
-//..........................
 
 import React from "react";
 import styles from "./Location.module.scss";
+
 
 const Location = () => {
   return (
@@ -56,7 +35,7 @@ const Location = () => {
 
         {/* Right side – QR code */}
         <div className={styles.qrBox}>
-          <img src="/dist\qrcode.jpeg" alt="Google Maps QR" />
+          <img src="/qrremovebg.jpeg" alt="Google Maps QR" />
           {/* <img src="/dist\qrremovebg.png" alt="google maps qr"/> */}
         </div>
       </div>
