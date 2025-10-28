@@ -46,6 +46,7 @@ import ContactPage from "./ContactPage";
 import styles from "./Home.module.scss";
 import ContactForm from "../components/ContactForm/ContactForm";
 import Location from "../components/Location/Location";
+// import CarLoader from "../components/CarLoader/CarLoader";
 
 
 const Home = () => {
@@ -95,6 +96,9 @@ const Home = () => {
       <Location/>
       <Footer />
     </>
+    // <>
+    // <CarLoader/>
+    // </>
   
    
   );

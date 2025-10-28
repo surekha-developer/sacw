@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./Duplicate.module.scss";
-import CarLoader from "../CarLoader/CarLoader";
+// import CarLoader from "../CarLoader/CarLoader";
 
 const Duplicate = () => {
 const [displayedNumber, setDisplayedNumber] = useState("");
@@ -90,7 +90,7 @@ useEffect(() => {
 
         </div>
 
-        <div className={styles.carLoader}>
+        <div className={styles.carsLoader}>
           <img
             src="/benjamin-child-7Cdw956mZ4w-unsplash-removebg-preview.png"
             alt="Car"
