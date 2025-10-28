@@ -35,6 +35,11 @@ const connectDB = async () => {
 };
 
 connectDB();
+//test route
+app.get("/", (req, res) => {
+  res.send("🚀 Backend is working properly!");
+});
+
 
 // ✅ Routes
 app.use("/api/contact", contactRoutes);
