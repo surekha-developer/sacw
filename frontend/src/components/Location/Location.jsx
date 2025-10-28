@@ -34,20 +34,21 @@ const Location = () => {
           <h2> Find Us</h2>
           <h3>Sai Annapurna Car Wash</h3>
           <p>
-              69-1-13,  
-              Baskar Nagar,
-              <br />Between Kwari Market and Lalacheruvu Road,
-              <br /> Rajamahendravaram
+            69-1-13, Baskar Nagar,
+            <br />
+            Between Kwari Market and Lalacheruvu Road,
+            <br /> Rajamahendravaram
           </p>
           <p>
-            <strong>Working Hours:</strong><br />
+            <strong>Working Hours:</strong>
+            <br />
             Monday – Sunday: 8:00 AM – 8:00 PM
           </p>
 
-          <p >
-  📞 Call: <a href={`tel:+919966622822`}>99666 22822</a>
-</p>
-          
+          <p>
+            📞 Call: <a href={`tel:+919966622822`}>99666 22822</a>
+          </p>
+
           <p className={styles.note}>
             Scan the QR to find our exact location on Google Maps.
           </p>
@@ -64,4 +65,3 @@ const Location = () => {
 };
 
 export default Location;
-
