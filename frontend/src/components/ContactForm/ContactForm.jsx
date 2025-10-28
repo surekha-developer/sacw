@@ -1,6 +1,3 @@
-
-
-
 import React, { useRef, useState } from "react";
 import styles from "./ContactForm.module.scss";
 import ContactAnimation from "../../pages/ContactAnimation";
@@ -49,29 +46,30 @@ function ContactForm() {
     return Object.keys(tempErrors).length === 0;
   };
 
- const handleChange = (e) => {
-  const { name, value } = e.target;
-  setFormData({ ...formData, [name]: value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
 
-  // Clear error automatically when user corrects input
-  setErrors((prevErrors) => {
-    const newErrors = { ...prevErrors };
+    // Clear error automatically when user corrects input
+    setErrors((prevErrors) => {
+      const newErrors = { ...prevErrors };
 
-    if (name === "phone") {
-      if (!/^\d{10}$/.test(value)) newErrors.phone = "Phone number must be 10 digits";
-      else delete newErrors.phone;
-    } else if (name === "email") {
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) newErrors.email = "Invalid email format";
-      else delete newErrors.email;
-    } else {
-      if (!value.trim()) newErrors[name] = "This field is required";
-      else delete newErrors[name];
-    }
+      if (name === "phone") {
+        if (!/^\d{10}$/.test(value))
+          newErrors.phone = "Phone number must be 10 digits";
+        else delete newErrors.phone;
+      } else if (name === "email") {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
+          newErrors.email = "Invalid email format";
+        else delete newErrors.email;
+      } else {
+        if (!value.trim()) newErrors[name] = "This field is required";
+        else delete newErrors[name];
+      }
 
-    return newErrors;
-  });
-};
-
+      return newErrors;
+    });
+  };
 
   const handleKeyDown = (e, nextRef) => {
     if (e.key === "Enter") {
@@ -91,7 +89,7 @@ function ContactForm() {
     setButtonText("Sending...");
 
     try {
-      const res = await fetch("http://localhost:5007/api/contact", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -159,7 +157,9 @@ function ContactForm() {
               onKeyDown={(e) => handleKeyDown(e, phoneRef)}
               disabled={isSending}
             />
-            {errors.email && <span className={styles.error}>{errors.email}</span>}
+            {errors.email && (
+              <span className={styles.error}>{errors.email}</span>
+            )}
 
             <input
               type="tel"
@@ -171,7 +171,9 @@ function ContactForm() {
               onKeyDown={(e) => handleKeyDown(e, messageRef)}
               disabled={isSending}
             />
-            {errors.phone && <span className={styles.error}>{errors.phone}</span>}
+            {errors.phone && (
+              <span className={styles.error}>{errors.phone}</span>
+            )}
 
             <textarea
               name="message"
@@ -182,7 +184,9 @@ function ContactForm() {
               onKeyDown={(e) => handleKeyDown(e, null)}
               disabled={isSending}
             />
-            {errors.message && <span className={styles.error}>{errors.message}</span>}
+            {errors.message && (
+              <span className={styles.error}>{errors.message}</span>
+            )}
 
             <button type="submit" disabled={isSending}>
               {buttonText}
