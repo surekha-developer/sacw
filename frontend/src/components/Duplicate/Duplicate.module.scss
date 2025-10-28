@@ -145,6 +145,120 @@
   }
 }
 
+ .callNow {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgb(24, 24, 64);
+
+  background: linear-gradient(to right, #8ccadc, #a5c9f6);
+  border-left: 4px solid #4d15dd;
+  padding: 8px 20px;
+  border-radius: 25px;
+  width: fit-content;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: fadeIn 0.5s ease-in forwards;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  a {
+    text-decoration: none;
+    color: #1b1464;
+    font-weight: 800;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 992px) {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+/* Optional glowing pulse for attraction */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.callNow {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+// .callNow {
+//   font-size: 1.4rem;
+//   font-weight: 700;
+//   color: #0d2e5b;
+//   margin-top: 10px;
+//   background: rgba(221, 229, 220, 0.7);
+//   border-radius: 25px;
+//   padding: 8px 18px;
+//   display: inline-block;
+//   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+//   a {
+//     text-decoration: none;
+//     color: #004aad;
+//     font-weight: 800;
+//   }
+
+//   &:hover {
+//     transform: scale(1.05);
+//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+//   }
+
+//   @media (max-width: 992px) {
+//     margin: 0 auto;
+//     text-align: center;
+//     font-size: 1.1rem;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 1rem;
+//   }
+// }
+// .callNow {
+//   animation: pulse 1.8s infinite;
+// }
+
+// @keyframes pulse {
+//   0% { transform: scale(1); }
+//   50% { transform: scale(1.05); }
+//   100% { transform: scale(1); }
+// }
+
+
 
   .ctaButton {
     display: inline-block;

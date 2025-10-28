@@ -45,6 +45,7 @@ import Gallery from "../components/Gallery/Gallery";
 import ContactPage from "./ContactPage";
 import styles from "./Home.module.scss";
 import ContactForm from "../components/ContactForm/ContactForm";
+import Location from "../components/Location/Location";
 
 
 const Home = () => {
@@ -91,11 +92,11 @@ const Home = () => {
       <section ref={contactRef} className={styles.scrollSection}>
       <ContactPage />
       </section>
+      <Location/>
       <Footer />
     </>
-    // <>
-    // <ContactForm/>
-    // </>
+  
+   
   );
 };
 export default Home;
