@@ -6,6 +6,7 @@ import './App.css'
 import Header from './components/Header/Header';
 import LandingPage from './pages/LandingPage';
 import Home from './pages/Home';
+import WhatsAppFloat from './components/WhatsAppFloat/WhatsAppFloat';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     {/* <Header/> */}
     {/* <LandingPage/> */}
     <Home/>
+     <WhatsAppFloat />
     
     </>
   );

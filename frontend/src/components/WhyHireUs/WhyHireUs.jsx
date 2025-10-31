@@ -8,7 +8,7 @@ import { SiTicktick } from "react-icons/si";
 
 function WhyHireUs() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 800, once: true });
   }, []);
 
   const listItems = [

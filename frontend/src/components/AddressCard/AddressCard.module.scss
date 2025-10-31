@@ -1,5 +1,3 @@
-
-
 // /* ✅ Outer Wrapper */
 .contactSection {
   width: 100%;
@@ -28,7 +26,10 @@
 /* ✅ Responsive Grid Layout */
 .card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* 💥 Magic line */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px, 1fr)
+  ); /* 💥 Magic line */
   gap: 25px;
   width: 100%;
   box-sizing: border-box;
@@ -98,7 +99,7 @@
 .whatsappLine {
   display: flex;
   align-items: center;
- 
+
   gap: 8px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -109,7 +110,7 @@
   border-radius: 6px;
   width: fit-content;
   margin-top: 8px;
-  
+
   text-shadow: none;
 
   @media (max-width: 992px) {
@@ -127,3 +128,24 @@
   color: #25d366;
 }
 
+.link,
+.whatsappLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #0f69df; /* change to your theme color */
+  }
+}
+
+.whatsappLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.whatsappIcon {
+  color: #25d366;
+  font-size: 1.2rem;
+}

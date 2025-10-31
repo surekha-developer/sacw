@@ -205,6 +205,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./ContactForm.module.scss";
 import ContactAnimation from "../../pages/ContactAnimation";
+import { FaWhatsapp } from "react-icons/fa";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -413,9 +414,10 @@ function ContactForm() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${styles.popupBtn} ${styles.whatsapp}`}
-                >
+                > <FaWhatsapp className={styles.icon} />
                   WhatsApp: 99666 22822
                 </a>
+                
                 <a
                   href="tel:+919966622822"
                   className={`${styles.popupBtn} ${styles.call}`}

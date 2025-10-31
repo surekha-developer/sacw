@@ -175,3 +175,15 @@
     color: #888;
   }
 }
+
+.phoneLink,
+.emailLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #1e90ff; /* or your brand color */
+  }
+}
+
