@@ -200,9 +200,7 @@
 
 // export default ContactForm;
 
-
 //.........................................
-
 
 import React, { useRef, useState } from "react";
 import styles from "./ContactForm.module.scss";
@@ -321,14 +319,13 @@ function ContactForm() {
     }
   };
 
-const closePopup = () => {
-  setShowPopup(false);
-  setFormData({ name: "", email: "", phone: "", message: "" });
-  setErrors({});
-  setButtonText("Send");
-  setIsSending(false);
-};
-
+  const closePopup = () => {
+    setShowPopup(false);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+    setErrors({});
+    setButtonText("Send");
+    setIsSending(false);
+  };
 
   return (
     <div className={styles.contactWrapper}>
@@ -362,7 +359,9 @@ const closePopup = () => {
               onKeyDown={(e) => handleKeyDown(e, phoneRef)}
               disabled={isSending}
             />
-            {errors.email && <span className={styles.error}>{errors.email}</span>}
+            {errors.email && (
+              <span className={styles.error}>{errors.email}</span>
+            )}
 
             <input
               type="tel"
@@ -374,7 +373,9 @@ const closePopup = () => {
               onKeyDown={(e) => handleKeyDown(e, messageRef)}
               disabled={isSending}
             />
-            {errors.phone && <span className={styles.error}>{errors.phone}</span>}
+            {errors.phone && (
+              <span className={styles.error}>{errors.phone}</span>
+            )}
 
             <textarea
               name="message"
@@ -397,35 +398,41 @@ const closePopup = () => {
       </div>
 
       {/* ✅ Popup Message */}
-       {showPopup && (
+      {showPopup && (
         <div className={styles.popupOverlay}>
           <div className={styles.popup}>
             <h3>Something went wrong 😔</h3>
             <p>
-              Unable to send your message. Please contact us via WhatsApp or Call.
+              Unable to send your message. Please contact us via WhatsApp or
+              Call.
             </p>
             <div className={styles.popupActions}>
-  <div className={styles.row}>
-    <a
-      href="https://wa.me/919966622822"
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`${styles.popupBtn} ${styles.whatsapp}`}
-    >
-      WhatsApp: 99666 22822
-    </a>
-    <a href="tel:+919966622822" className={`${styles.popupBtn} ${styles.call}`}>
-      Call: 99666 22822
-    </a>
-  </div>
+              <div className={styles.row}>
+                <a
+                  href="https://wa.me/919966622822"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles.popupBtn} ${styles.whatsapp}`}
+                >
+                  WhatsApp: 99666 22822
+                </a>
+                <a
+                  href="tel:+919966622822"
+                  className={`${styles.popupBtn} ${styles.call}`}
+                >
+                  Call: 99666 22822
+                </a>
+              </div>
 
-  <div className={styles.okRow}>
-    <button className={`${styles.popupBtn} ${styles.ok}`} onClick={closePopup}>
-      OK
-    </button>
-  </div>
-</div>
-
+              <div className={styles.okRow}>
+                <button
+                  className={`${styles.popupBtn} ${styles.ok}`}
+                  onClick={closePopup}
+                >
+                  OK
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
