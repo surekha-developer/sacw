@@ -1,35 +1,4 @@
-// import AddressCard from "../components/AddressCard/AddressCard";
-// import BgVideoWithText from "../components/BgVideoWithText/BgVideoWithText";
-// import Carousels from "../components/Carousels/Carousels";
-// import Duplicate from "../components/Duplicate/Duplicate";
-// import Footer from "../components/Footer/Footer";
-// import Header from "../components/Header/Header";
-// import React from "react";
-// import HowWeWork from "../components/HowWeWork/HowWeWork";
-// import WhyHireUs from "../components/WhyHireUs/WhyHireUs";
-// import Gallery from "../components/Gallery/Gallery";
-// import ContactPage from "./ContactPage";
 
-
-// const Home = () => {
-//   return (
-//     <>
-//       <Header />
-//       <Duplicate />
-//       <AddressCard />
-//       <Carousels />
-//       <WhyHireUs />
-//       <HowWeWork />
-
-//       <Gallery />
-//       <ContactPage />
-//       <Footer />
-//     </>
-//   );
-// };
-// export default Home;
-
-//..............................
 
 
 import AddressCard from "../components/AddressCard/AddressCard";
@@ -41,7 +10,7 @@ import Header from "../components/Header/Header";
 import React,{useRef} from "react";
 import HowWeWork from "../components/HowWeWork/HowWeWork";
 import WhyHireUs from "../components/WhyHireUs/WhyHireUs";
-import Gallery from "../components/Gallery/Gallery";
+// import Gallery from "../components/Gallery/Gallery";
 import ContactPage from "./ContactPage";
 import styles from "./Home.module.scss";
 import ContactForm from "../components/ContactForm/ContactForm";
@@ -87,9 +56,9 @@ const Home = () => {
         <HowWeWork />
       </section>
 
-     <section ref={galleryRef} className={styles.scrollSection}>
+     {/* <section ref={galleryRef} className={styles.scrollSection}>
         <Gallery />
-      </section>
+      </section> */}
       <section ref={contactRef} className={styles.scrollSection}>
       <ContactPage />
       </section>

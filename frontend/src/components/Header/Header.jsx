@@ -35,9 +35,9 @@ function Header({ scrollToSection, refs }) {
         <button onClick={() => scrollToSection(refs.featuresRef)}>
           Features
         </button>
-        <button onClick={() => scrollToSection(refs.galleryRef)}>
+        {/* <button onClick={() => scrollToSection(refs.galleryRef)}>
           Gallery
-        </button>
+        </button> */}
         <button onClick={() => scrollToSection(refs.contactRef)}>
           Contact Us
         </button>
